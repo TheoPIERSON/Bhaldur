@@ -20,9 +20,14 @@ export class UserController {
     return this.userService.create(dto);
   }
 
-  @Get()
+  @Get('all-users')
   findAll() {
     return this.userService.findAll();
+  }
+
+  @Get('test')
+  test() {
+    return this.userService.test();
   }
 
   @Get(':id')
